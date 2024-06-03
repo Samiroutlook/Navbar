@@ -1,6 +1,17 @@
-// src/Components/Navbar/Nav.jsx
 import React from "react";
-import { Flex, Text, Link as ChakraLink, useColorMode } from "@chakra-ui/react";
+import {
+  Flex,
+  Text,
+  Link as ChakraLink,
+  useColorMode,
+  IconButton,
+  Box,
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
+} from "@chakra-ui/react";
+import { HamburgerIcon } from "@chakra-ui/icons";
 import ColorModeSwitcher from "../../ColorModeSwitcher";
 import { NavLink } from "react-router-dom";
 
@@ -11,6 +22,8 @@ function Nav() {
 
   return (
     <Flex
+      position={"fixed"}
+      w={"full"}
       shadow="md"
       bg="transparent"
       fontSize="xl"
@@ -23,6 +36,7 @@ function Nav() {
         Samir
       </Text>
       <Flex
+        display={{ base: "none", md: "flex" }}
         w="500px"
         justifyContent="space-between"
         fontWeight={600}
@@ -69,7 +83,41 @@ function Nav() {
           Contact
         </ChakraLink>
       </Flex>
-      <ColorModeSwitcher />
+      <Flex alignItems="center">
+        <ColorModeSwitcher />
+        <Box ml={2} display={{ base: "flex", md: "none" }}>
+          <Menu>
+            <MenuButton
+              as={IconButton}
+              aria-label="Options"
+              icon={<HamburgerIcon />}
+              variant="outline"
+            />
+            <MenuList>
+              <MenuItem as={NavLink} to="/" _hover={{ color: hoverColor }}>
+                Home
+              </MenuItem>
+              <MenuItem as={NavLink} to="/about" _hover={{ color: hoverColor }}>
+                About
+              </MenuItem>
+              <MenuItem
+                as={NavLink}
+                to="/projects"
+                _hover={{ color: hoverColor }}
+              >
+                Projects
+              </MenuItem>
+              <MenuItem
+                as={NavLink}
+                to="/contact"
+                _hover={{ color: hoverColor }}
+              >
+                Contact
+              </MenuItem>
+            </MenuList>
+          </Menu>
+        </Box>
+      </Flex>
     </Flex>
   );
 }

@@ -24,6 +24,7 @@ const ColorModeSwitcher = () => {
         transition={{ duration: 0.2 }}
       >
         <IconButton
+          p={2}
           fontSize={"xl"}
           right={0}
           aria-label="Toggle Color Mode"
