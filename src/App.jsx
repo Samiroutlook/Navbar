@@ -1,6 +1,6 @@
 import React from "react";
 import { ChakraProvider, ColorModeScript } from "@chakra-ui/react";
-import Nav from "./Components/Navbar/Nav";
+import Navbar from "./Components/Navbar/Navbar";
 import theme from "./theme";
 import { Routes, Route } from "react-router-dom";
 import Home from "./Components/Pages/Home";
@@ -12,7 +12,7 @@ function App() {
   return (
     <ChakraProvider theme={theme}>
       <ColorModeScript initialColorMode={theme.config.initialColorMode} />
-      <Nav />
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />

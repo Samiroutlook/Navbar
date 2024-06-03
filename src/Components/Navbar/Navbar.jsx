@@ -15,17 +15,19 @@ import { HamburgerIcon } from "@chakra-ui/icons";
 import ColorModeSwitcher from "../../ColorModeSwitcher";
 import { NavLink } from "react-router-dom";
 
-function Nav() {
+function Navbar() {
   const { colorMode } = useColorMode();
+  const text = colorMode === "light" ? "black" : "white";
   const hoverColor = colorMode === "light" ? "teal.400" : "teal.300";
   const activeColor = colorMode === "light" ? "teal.400" : "teal.300";
+  const navbg = colorMode === "light" ? "whiteAlpha.800" : "trasparent";
 
   return (
     <Flex
       position={"fixed"}
       w={"full"}
-      shadow="md"
-      bg="transparent"
+      bg={navbg}
+      backdropFilter={blur}
       fontSize="xl"
       h={14}
       alignItems="center"
@@ -33,18 +35,21 @@ function Nav() {
       px={8}
     >
       <Text
+        fontFamily={"Roboto Mono "}
+        letterSpacing={"tight"}
         fontWeight={700}
-        fontSize={["2xl", "3xl", "3xl"]}
-        color={activeColor}
+        fontSize={["2xl", "3xl", "2xl"]}
+        color={text}
       >
         Samir
       </Text>
       <Flex
         display={{ base: "none", md: "flex" }}
+        justifyContent={"space-between"}
         w="500px"
-        justifyContent="space-between"
         fontWeight={600}
         fontSize="lg"
+        mx={"auto"}
       >
         <ChakraLink
           as={NavLink}
@@ -138,4 +143,4 @@ function Nav() {
   );
 }
 
-export default Nav;
+export default Navbar;
