@@ -32,7 +32,11 @@ function Nav() {
       justifyContent="space-between"
       px={8}
     >
-      <Text fontWeight={700} fontSize="2xl" color={activeColor}>
+      <Text
+        fontWeight={700}
+        fontSize={["2xl", "3xl", "3xl"]}
+        color={activeColor}
+      >
         Samir
       </Text>
       <Flex
@@ -94,16 +98,27 @@ function Nav() {
               variant="outline"
             />
             <MenuList>
-              <MenuItem as={NavLink} to="/" _hover={{ color: hoverColor }}>
+              <MenuItem
+                as={NavLink}
+                to="/"
+                _hover={{ color: hoverColor }}
+                _activeLink={{ color: activeColor }}
+              >
                 Home
               </MenuItem>
-              <MenuItem as={NavLink} to="/about" _hover={{ color: hoverColor }}>
+              <MenuItem
+                as={NavLink}
+                to="/about"
+                _hover={{ color: hoverColor }}
+                _activeLink={{ color: activeColor }}
+              >
                 About
               </MenuItem>
               <MenuItem
                 as={NavLink}
                 to="/projects"
                 _hover={{ color: hoverColor }}
+                _activeLink={{ color: activeColor }}
               >
                 Projects
               </MenuItem>
@@ -111,6 +126,7 @@ function Nav() {
                 as={NavLink}
                 to="/contact"
                 _hover={{ color: hoverColor }}
+                _activeLink={{ color: activeColor }}
               >
                 Contact
               </MenuItem>

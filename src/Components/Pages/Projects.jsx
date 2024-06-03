@@ -9,7 +9,12 @@ function Projects() {
       animate={{ opacity: 1 }}
       transition={{ duration: 1, ease: "easeOut" }}
     >
-      <Grid placeItems={"center"} h={"100vh"} fontSize={"6xl"} fontWeight={600}>
+      <Grid
+        placeItems={"center"}
+        h={"100vh"}
+        fontWeight={600}
+        fontSize={["2xl", "3xl", "3xl"]}
+      >
         Hello, I am Projects
       </Grid>
     </motion.div>

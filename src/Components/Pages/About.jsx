@@ -9,7 +9,12 @@ function About() {
       animate={{ opacity: 1 }}
       transition={{ duration: 1, ease: "easeOut" }}
     >
-      <Grid placeItems={"center"} h={"100vh"} fontSize={"6xl"} fontWeight={600}>
+      <Grid
+        placeItems={"center"}
+        h={"100vh"}
+        fontSize={["2xl", "3xl", "3xl"]}
+        fontWeight={600}
+      >
         Hello, I am About
       </Grid>
     </motion.div>
