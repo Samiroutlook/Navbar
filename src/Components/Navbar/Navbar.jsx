@@ -32,7 +32,7 @@ function Navbar() {
       h={14}
       alignItems="center"
       justifyContent="space-between"
-      px={8}
+      px={("2", "8")}
     >
       <Text
         fontFamily={"Roboto Mono "}
@@ -108,6 +108,7 @@ function Navbar() {
                 to="/"
                 _hover={{ color: hoverColor }}
                 _activeLink={{ color: activeColor }}
+                fontSize={"md"}
               >
                 Home
               </MenuItem>
@@ -116,6 +117,7 @@ function Navbar() {
                 to="/about"
                 _hover={{ color: hoverColor }}
                 _activeLink={{ color: activeColor }}
+                fontSize={"md"}
               >
                 About
               </MenuItem>
@@ -124,6 +126,7 @@ function Navbar() {
                 to="/projects"
                 _hover={{ color: hoverColor }}
                 _activeLink={{ color: activeColor }}
+                fontSize={"md"}
               >
                 Projects
               </MenuItem>
@@ -132,6 +135,7 @@ function Navbar() {
                 to="/contact"
                 _hover={{ color: hoverColor }}
                 _activeLink={{ color: activeColor }}
+                fontSize={"md"}
               >
                 Contact
               </MenuItem>
