@@ -10,7 +10,7 @@ import { AnimatePresence, motion } from "framer-motion";
 const ColorModeSwitcher = () => {
   const { colorMode, toggleColorMode } = useColorMode();
   const SwitchIcon = useColorModeValue(MoonIcon, SunIcon);
-  const bgColor = useColorModeValue("purple.500", "yellow.300");
+  const bgColor = useColorModeValue("purple.500", "orange.200");
   const color = useColorModeValue("white", "black");
 
   return (
@@ -24,15 +24,15 @@ const ColorModeSwitcher = () => {
         transition={{ duration: 0.2 }}
       >
         <IconButton
-          fontSize={"lg"}
+          fontSize={"md"}
           right={0}
           aria-label="Toggle Color Mode"
           icon={<Icon as={SwitchIcon} />}
           onClick={toggleColorMode}
           bg={bgColor}
           color={color}
-          transition="background-color 1s, color 1s" // Ensures smooth transition on color change
-          _hover={{ bg: useColorModeValue("purple.600", "yellow.400") }}
+          transition="background-color .3s, color 1s" // Ensures smooth transition on color change
+          _hover={{ bg: useColorModeValue("purple.600", "orange.300") }}
           _focus={{ boxShadow: "none" }}
         />
       </motion.div>
