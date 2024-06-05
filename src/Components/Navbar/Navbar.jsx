@@ -32,7 +32,7 @@ function Navbar() {
       h={14}
       alignItems="center"
       justifyContent="space-between"
-      px={("8", "2")}
+      px={["2", "8"]}
     >
       <Text
         fontFamily={"Roboto Mono "}
