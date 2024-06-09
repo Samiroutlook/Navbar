@@ -19,8 +19,8 @@ function Navbar() {
   const { colorMode } = useColorMode();
   const text = colorMode === "light" ? "black" : "white";
   const hoverColor = colorMode === "light" ? "teal.400" : "teal.300";
-  const activeColor = colorMode === "light" ? "teal.400" : "teal.300";
-  const navbg = colorMode === "light" ? "whiteAlpha.800" : "trasparent";
+  const activeColor = colorMode === "light" ? "teal.500" : "teal.300";
+  const navbg = colorMode === "light" ? "gray.50" : "gray.800";
 
   return (
     <Flex
@@ -33,18 +33,19 @@ function Navbar() {
       alignItems="center"
       justifyContent="space-between"
       px={["2", "8"]}
+      shadow={"md"}
     >
       <Text
         fontFamily={"Roboto Mono "}
         letterSpacing={"tight"}
         fontWeight={700}
-        fontSize={["2xl", "3xl", "2xl"]}
+        fontSize={"2xl"}
         color={text}
       >
         Samir
       </Text>
       <Flex
-        display={{ base: "none", md: "flex" }}
+        display={{ base: "none", lg: "flex" }}
         justifyContent={"space-between"}
         w="500px"
         fontWeight={500}
@@ -94,7 +95,7 @@ function Navbar() {
       </Flex>
       <Flex alignItems="center">
         <ColorModeSwitcher />
-        <Box ml={2} display={{ base: "flex", md: "none" }}>
+        <Box ml={2} display={{ base: "flex", lg: "none" }}>
           <Menu>
             <MenuButton
               as={IconButton}
